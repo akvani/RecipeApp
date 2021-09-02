@@ -1,0 +1,31 @@
+image: java:11-jdk
+
+stages:
+  - test
+  - build
+  
+maven-test:
+  image: maven:3-jdk-11
+  stage: test
+  script: 'mvn test'
+  
+maven-build:
+  image: maven:3-jdk-11
+  stage: build
+  script: 'mvn package'
+  
+services:
+  - 'mysql:latest'
+  - 'mongo:latest'
+
+variables:
+  MYSQL_HOST: localhost
+  MYSQL_DATABASE: authibm
+  MYSQL_USER: root
+  MYSQL_PASSWORD: password
+  MYSQL_HOST: localhost
+  MONGO_DATABASE: favouritedb
+  MONGO_PORT: 27017
+  MONGO_HOST: mongodb://localhost:27017
+
+

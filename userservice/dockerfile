@@ -1,0 +1,8 @@
+FROM openjdk:16-alpine3.13
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} userservice-1.0.jar
+ENV MYSQL_HOST=localhost
+ENV MYSQL_DATABASE=authibm
+ENV MYSQL_USER=root
+ENV MYSQL_PASSWORD=password
+ENTRYPOINT ["java","-jar","userservice-1.0.jar"]
