@@ -19,11 +19,7 @@ services:
   - 'mongo:latest'
 
 variables:
-  MYSQL_HOST: localhost
-  MYSQL_DATABASE: authibm
-  MYSQL_USER: root
-  MYSQL_PASSWORD: password
-  MYSQL_HOST: localhost
+  MYSQL_ROOT_PASSWORD: password
   MONGO_DATABASE: favouritedb
   MONGO_PORT: 27017
   MONGO_HOST: mongodb://localhost:27017
