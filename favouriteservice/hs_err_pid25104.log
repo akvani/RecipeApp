@@ -1,0 +1,215 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 132120576 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3466), pid=25104, tid=31344
+#
+# JRE version:  (16.0.1+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (16.0.1+9-24, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 55599 -testLoaderClass org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader -loaderpluginname org.eclipse.jdt.junit5.runtime -packageNameFile C:\Users\KALAIV~1\AppData\Local\Temp\packageNames1956881418654020664.txt
+
+Host: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1151)
+Time: Fri Sep  3 14:53:58 2021 India Standard Time elapsed time: 0.057500 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002235a993360):  JavaThread "Unknown thread" [_thread_in_vm, id=31344, stack(0x000000ac9e200000,0x000000ac9e300000)]
+
+Stack: [0x000000ac9e200000,0x000000ac9e300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6687ca]
+V  [jvm.dll+0x7ca3c9]
+V  [jvm.dll+0x7cbb53]
+V  [jvm.dll+0x7cc1b3]
+V  [jvm.dll+0x242ea5]
+V  [jvm.dll+0x665589]
+V  [jvm.dll+0x65a175]
+V  [jvm.dll+0x2fc5ab]
+V  [jvm.dll+0x3037a6]
+V  [jvm.dll+0x352fee]
+V  [jvm.dll+0x35321f]
+V  [jvm.dll+0x2d3618]
+V  [jvm.dll+0x2d4854]
+V  [jvm.dll+0x79ccb1]
+V  [jvm.dll+0x360de1]
+V  [jvm.dll+0x77a990]
+V  [jvm.dll+0x3e55af]
+V  [jvm.dll+0x3e7081]
+C  [jli.dll+0x52fb]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffb2fadcbb8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002235a9d5060 GCTaskThread "GC Thread#0" [stack: 0x000000ac9e300000,0x000000ac9e400000] [id=30692]
+  0x000002235a9e6270 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000ac9e400000,0x000000ac9e500000] [id=1624]
+  0x000002235a9e6b10 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000ac9e500000,0x000000ac9e600000] [id=24224]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb2f2b44d7]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002235a990cd0] Heap_lock - owner thread: 0x000002235a993360
+
+Heap address: 0x0000000082400000, size: 2012 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000082400000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb2f6924ed]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.048 Loaded shared library C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff642120000 - 0x00007ff64212e000 	C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\javaw.exe
+0x00007ffb8e3f0000 - 0x00007ffb8e5e5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffb8e2f0000 - 0x00007ffb8e3ad000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffb8c150000 - 0x00007ffb8c419000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffb8bfb0000 - 0x00007ffb8c0b0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffb740d0000 - 0x00007ffb740e8000 	C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\jli.dll
+0x00007ffb8e150000 - 0x00007ffb8e2f0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffb8c420000 - 0x00007ffb8c442000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffb8d2b0000 - 0x00007ffb8d2da000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffb8bd00000 - 0x00007ffb8be0b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffb8c0b0000 - 0x00007ffb8c14d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffb71ff0000 - 0x00007ffb72009000 	C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\VCRUNTIME140.dll
+0x00007ffb64120000 - 0x00007ffb643ba000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffb8e0b0000 - 0x00007ffb8e14e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffb8d0a0000 - 0x00007ffb8d0d0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffb73f00000 - 0x00007ffb73f0c000 	C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\vcruntime140_1.dll
+0x00007ffb341b0000 - 0x00007ffb34241000 	C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\msvcp140.dll
+0x00007ffb2efd0000 - 0x00007ffb2fb7b000 	C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\server\jvm.dll
+0x00007ffb8cb00000 - 0x00007ffb8cbac000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffb8c450000 - 0x00007ffb8c4eb000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffb8d0e0000 - 0x00007ffb8d20a000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffb8d2a0000 - 0x00007ffb8d2a8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffb71800000 - 0x00007ffb71809000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffb8d030000 - 0x00007ffb8d09b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffb765a0000 - 0x00007ffb765c7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffb83a20000 - 0x00007ffb83a2a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffb8a260000 - 0x00007ffb8a272000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffb836d0000 - 0x00007ffb836da000 	C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\jimage.dll
+0x00007ffb74e90000 - 0x00007ffb75074000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffb74d70000 - 0x00007ffb74d9c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffb8be10000 - 0x00007ffb8be93000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffb56680000 - 0x00007ffb566a5000 	C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\server
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 55599 -testLoaderClass org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader -loaderpluginname org.eclipse.jdt.junit5.runtime -packageNameFile C:\Users\KALAIV~1\AppData\Local\Temp\packageNames1956881418654020664.txt
+java_class_path (initial): C:\AKV\Angular Learning\FSD\Final Assignment\playerstate-java-boilerplate\favouriteservice\target\test-classes;C:\AKV\Angular Learning\FSD\Final Assignment\playerstate-java-boilerplate\favouriteservice\target\classes;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.jupiter.api_5.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.jupiter.engine_5.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.jupiter.migrationsupport_5.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.jupiter.params_5.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.platform.commons_1.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.platform.engine_1.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.platform.launcher_1.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.platform.runner_1.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.platform.suite.api_1.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit.vintage.engine_5.7.1.v20210222-1948.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.opentest4j_1.2.0.v20190826-0900.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.apiguardian_1.1.0.v20190826-0900.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.junit_4.13.0.v20200204-1500.jar;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\KalaivaniAnandan\.m2\repository\org\springframework\boot\spring-boot-starter-data-mongodb\2.5.4\spring-boot-starter-data-mongodb-2.5.4.jar;C:\U
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2109734912                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 2109734912                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_121\
+CLASSPATH=.;C:\PROGRA~1\IBM\SQLLIB\java\DB2JCC~2.JAR;C:\PROGRA~1\IBM\SQLLIB\java\DB2JCC~1.JAR;C:\Program Files\IBM\SQLLIB\java\jdk\bin;C:\PROGRA~1\IBM\SQLLIB~1\java\db2java.zip;C:\PROGRA~1\IBM\SQLLIB~1\java\db2jcc.jar;C:\PROGRA~1\IBM\SQLLIB~1\java\sqlj.zip;C:\PROGRA~1\IBM\SQLLIB~1\java\DB2JCC~1.JAR;C:\PROGRA~1\IBM\SQLLIB~1\BIN;C:\PROGRA~1\IBM\SQLLIB~1\java\Common.jar
+PATH=C:/AKV/Angular Learning/FSD/SpringBoot/sts-4.11.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin/server;C:/AKV/Angular Learning/FSD/SpringBoot/sts-4.11.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\IBM\Personal Communications\;C:\Program Files (x86)\IBM\Trace Facility\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\PROGRA~1\IBM\SQLLIB~1\BIN;C:\PROGRA~1\IBM\SQLLIB~1\FUNCTION;C:\Program Files\IBM\gsk8\bin;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\IBM\gsk8\lib64;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\AKV\Project\IBP\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MongoDB\Server\4.4\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\IBM\gsk8\lib64;C:\Program Files\IBM\gsk8\bin;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Users\KalaivaniAnandan\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\KalaivaniAnandan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\KalaivaniAnandan\AppData\Roaming\npm;C:\Users\KalaivaniAnandan\AppData\Local\GitHubDesktop\bin;C:\Users\KalaivaniAnandan\AppData\Local\Box\Box Edit\;;C:\AKV\Angular Learning\FSD\SpringBoot\sts-4.11.0.RELEASE;
+USERNAME=04681A744
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.1151)
+OS uptime: 13 days 23:12 hours
+Hyper-V role detected
+
+CPU: total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 78 stepping 3 microcode 0xd6, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, rtm, adx, fma, vzeroupper, clflush, clflushopt, hv
+
+Memory: 4k page, system-wide physical 8047M (279M free)
+TotalPageFile size 32623M (AvailPageFile size 130M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 177M
+
+vm_info: OpenJDK 64-Bit Server VM (16.0.1+9-24) for windows-amd64 JRE (16.0.1+9-24), built on Mar 26 2021 19:30:07 by "mach5one" with MS VC++ 16.7 (VS2019)
+
+END.
