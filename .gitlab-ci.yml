@@ -19,8 +19,8 @@ services:
   - 'mongo:latest'
 
 variables:
-  MYSQL_ROOT_PASSWORD: password
-  MYSQL_PASSWORD: password
+  MYSQL_ROOT_PASSWORD: dockerpass
+  MYSQL_PASSWORD: dockerpass
   MONGO_DATABASE: favouritedb
   MONGO_PORT: 27017
   MONGO_HOST: localhost
